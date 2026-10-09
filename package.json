@@ -2,6 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "zip": "rm -rf dist && mkdir dist && zip -rq dist/extension.zip manifest.json background.js content.js drive.js sidepanel.html sidepanel.js icons _locales -x '*.DS_Store' && unzip -l dist/extension.zip"
   }
 }

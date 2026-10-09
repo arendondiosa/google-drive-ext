@@ -1,0 +1,45 @@
+# Al publicar un release en GitHub, arma el zip de la extensión con la versión de la etiqueta (v1.2.3 → 1.2.3)
+# y lo adjunta al release. La versión se maneja desde ahí: la de manifest.json en el repo es solo para desarrollo.
+name: Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  extension:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.release.tag_name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - name: Poner la versión y el client ID de la tienda en el manifest
+        env:
+          # Variable del repositorio (Settings → Variables): client OAuth creado con el ID de la Chrome Web Store.
+          # Sin ella, el zip lleva el client ID que esté en el repo.
+          STORE_OAUTH_CLIENT_ID: ${{ vars.STORE_OAUTH_CLIENT_ID }}
+        run: |
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const version = process.env.TAG.replace(/^v/, "");
+            // Chrome solo acepta de 1 a 4 números separados por puntos.
+            if (!/^\d+(\.\d+){0,3}$/.test(version)) throw new Error(`Etiqueta no válida: ${process.env.TAG}. Usa la forma v1.2.3`);
+            const manifest = JSON.parse(fs.readFileSync("manifest.json", "utf8"));
+            manifest.version = version;
+            if (process.env.STORE_OAUTH_CLIENT_ID) manifest.oauth2.client_id = process.env.STORE_OAUTH_CLIENT_ID;
+            fs.writeFileSync("manifest.json", JSON.stringify(manifest, null, 2) + "\n");
+          '
+      - run: npm run zip
+      - name: Adjuntar el zip al release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mv dist/extension.zip "dist/clonar-en-drive-$TAG.zip"
+          gh release upload "$TAG" "dist/clonar-en-drive-$TAG.zip" --clobber

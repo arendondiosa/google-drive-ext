@@ -5,6 +5,8 @@ Clona archivos o carpetas de Google Drive eligiendo destino, nombre y permisos. 
 - **Extensión de Chrome** (raíz del repo): Manifest V3, sin backend ni dependencias. Sin límite de tiempo y con avance en vivo; es la mejor opción para carpetas grandes.
 - **Complemento de Google Workspace** (`addon/`): Apps Script. Funciona en cualquier navegador, dentro de la barra derecha de Drive, pero copia por tramos (ver más abajo).
 
+Página del producto y política de privacidad: <https://arendondiosa.github.io/google-drive-ext/> (carpeta `docs/`, publicada con GitHub Pages desde la rama `main`).
+
 # Extensión de Chrome
 
 ## Configuración (una vez)
@@ -38,9 +40,12 @@ Cubren la lógica de las dos versiones contra un Drive simulado (`fake-drive.js`
 
 ## Publicar en la Chrome Web Store
 
-- El zip solo debe llevar `manifest.json`, `background.js`, `content.js`, `drive.js`, `sidepanel.*`, `icons/` y `_locales/` (sin tests ni `addon/`).
-- El ID de la extensión publicada es distinto al de la carga descomprimida. Sube primero un borrador, copia la clave pública desde el panel de desarrollador (*Paquete → Ver clave pública*) y agrégala como `"key"` en tu `manifest.json` local para que ambos IDs coincidan; el client OAuth debe usar ese ID. No incluyas `key` en el zip que subes.
-- El scope `drive` es **restringido**: para salir del modo Testing (máx. 100 usuarios) Google exige verificación de la app: dominio verificado, página de inicio, política de privacidad (ver `PRIVACY.md`), justificación del scope y video de demostración. La extensión no tiene servidor, lo que normalmente la exime de la auditoría de seguridad CASA; confírmalo en el formulario de verificación.
+- **Versiones**: se manejan desde los releases de GitHub. Publica un release con una etiqueta de la forma `v1.2.3` y el workflow `.github/workflows/release.yml` corre los tests, pone esa versión en el manifest y adjunta `clonar-en-drive-v1.2.3.zip` al release; ese es el archivo que se sube a la tienda. La `version` de `manifest.json` en el repo es solo para desarrollo.
+- **Client ID de la tienda**: guárdalo como variable del repositorio `STORE_OAUTH_CLIENT_ID` (Settings → Secrets and variables → Actions → Variables) y el workflow lo pone en el zip, sin tocar el de desarrollo.
+- `npm run zip` arma el mismo paquete en local (`dist/extension.zip`), con la versión y el client ID que haya en el repo.
+- Los textos para los formularios (justificación de permisos, descripciones) están en `STORE.md`.
+- El ID de la extensión publicada es distinto al de la carga descomprimida: sube primero un borrador para conocerlo y crea con él un segundo client OAuth tipo *Extensión de Chrome*; ese es el `STORE_OAUTH_CLIENT_ID`.
+- El scope `drive` es **restringido**: para salir del modo Testing (máx. 100 usuarios) Google exige verificación de la app: dominio verificado, página de inicio, política de privacidad (`docs/privacy.md`), justificación del scope y video de demostración. La extensión no tiene servidor, lo que normalmente la exime de la auditoría de seguridad CASA; confírmalo en el formulario de verificación.
 - En la ficha de la Store: propósito único, justificación de `identity`, `sidePanel`, `scripting` y del acceso a `drive.google.com`, y declaración de uso de datos (*Limited Use*).
 
 # Complemento de Google Workspace
@@ -69,4 +74,4 @@ Solo hay una copia en curso por usuario. Si la carpeta de origen cambia mientras
 
 ## Publicar en Workspace Marketplace
 
-Requiere pasar el proyecto de Apps Script a un proyecto estándar de Google Cloud, configurar ahí el **Google Workspace Marketplace SDK** y la misma verificación del scope `drive` que la extensión (puede ser el mismo proyecto de Cloud).
+Los textos para la ficha y la verificación están en `STORE.md`. Requiere pasar el proyecto de Apps Script a un proyecto estándar de Google Cloud, configurar ahí el **Google Workspace Marketplace SDK** y la misma verificación del scope `drive` que la extensión (puede ser el mismo proyecto de Cloud).
