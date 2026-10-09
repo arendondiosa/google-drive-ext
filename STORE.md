@@ -2,6 +2,16 @@
 
 Textos listos para pegar en los formularios de Google. Las justificaciones van en inglés porque las leen revisores de Google; las descripciones de la ficha van en los dos idiomas.
 
+## 0. Direcciones
+
+| Campo | URL |
+|---|---|
+| Página principal | `https://rendon.co/google-drive-ext/` |
+| Política de privacidad | `https://rendon.co/google-drive-ext/privacy.html` |
+| Términos del servicio | `https://rendon.co/google-drive-ext/terms.html` |
+| Ayuda / soporte | `https://rendon.co/google-drive-ext/guia.html` (español) · `https://rendon.co/google-drive-ext/guide.html` (inglés) |
+| Dominio autorizado | `rendon.co` |
+
 ## 1. Verificación OAuth (Google Auth Platform)
 
 ### Justificación del scope `https://www.googleapis.com/auth/drive`

@@ -5,7 +5,7 @@ Clona archivos o carpetas de Google Drive eligiendo destino, nombre y permisos. 
 - **Extensión de Chrome** (raíz del repo): Manifest V3, sin backend ni dependencias. Sin límite de tiempo y con avance en vivo; es la mejor opción para carpetas grandes.
 - **Complemento de Google Workspace** (`addon/`): Apps Script. Funciona en cualquier navegador, dentro de la barra derecha de Drive, pero copia por tramos (ver más abajo).
 
-Página del producto y política de privacidad: <https://arendondiosa.github.io/google-drive-ext/> (carpeta `docs/`, publicada con GitHub Pages desde la rama `main`).
+Página del producto y política de privacidad: <https://rendon.co/google-drive-ext/> (carpeta `docs/`, publicada con GitHub Pages desde la rama `main`).
 
 # Extensión de Chrome
 

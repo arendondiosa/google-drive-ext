@@ -23,13 +23,17 @@ Clona archivos y carpetas completas de Google Drive, eligiendo dónde va la copi
 2. Abre Clonar en Drive desde la barra lateral.
 3. Elige el destino, el nombre y los permisos, y pulsa **Clonar**.
 
+Cada opción está explicada en la [guía de uso](guia.md).
+
 ## Por qué pide acceso a Google Drive
 
 Para clonar una carpeta hay que leer todo su contenido, crear las copias en el destino y, si lo pides, leer y repetir sus permisos. Ese es el único uso que se le da al acceso: no hay servidores propios, no se descargan tus archivos y no se comparte ningún dato. Los detalles están en la [política de privacidad](privacy.md).
 
 ## Soporte
 
-[Reportar un problema](https://github.com/arendondiosa/google-drive-ext/issues) · arendondiosa@gmail.com
+[Guía de uso](guia.md) · [Reportar un problema](https://github.com/arendondiosa/google-drive-ext/issues) · arendondiosa@gmail.com
+
+[Política de privacidad](privacy.md) · [Términos del servicio](terms.md)
 
 ---
 
@@ -56,10 +60,14 @@ Clone Google Drive files and whole folders, choosing where the copy goes, its na
 2. Open Clone in Drive from the side panel.
 3. Pick the destination, name and permissions, and press **Clone**.
 
+Every option is explained in the [user guide](guide.md).
+
 ## Why it asks for Google Drive access
 
 Cloning a folder requires reading all of its contents, creating the copies in the destination and, if you ask for it, reading and repeating its permissions. That is the only use made of the access: there are no servers of our own, your files are not downloaded and no data is shared. Details are in the [privacy policy](privacy.md#privacy-policy--clone-in-drive).
 
 ## Support
 
-[Report a problem](https://github.com/arendondiosa/google-drive-ext/issues) · arendondiosa@gmail.com
+[User guide](guide.md) · [Report a problem](https://github.com/arendondiosa/google-drive-ext/issues) · arendondiosa@gmail.com
+
+[Privacy policy](privacy.md#privacy-policy--clone-in-drive) · [Terms of service](terms.md#terms-of-service--clone-in-drive)
