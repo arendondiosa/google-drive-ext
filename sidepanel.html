@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="extName"></title>
+    <style>
+      :root { color-scheme: light dark; font: 14px/1.4 system-ui, sans-serif; }
+      body { margin: 0; padding: 12px; }
+      fieldset { border: 1px solid color-mix(in srgb, currentColor 25%, transparent); border-radius: 8px; margin: 0 0 12px; padding: 8px 12px 12px; }
+      legend { font-weight: 600; padding: 0 4px; }
+      input[type="text"], input[type="url"], input[type="email"], select { box-sizing: border-box; font: inherit; padding: 4px 6px; }
+      input[type="text"], input[type="url"] { width: 100%; }
+      label { display: block; margin-top: 6px; }
+      ul { list-style: none; margin: 6px 0; padding: 0; }
+      #destList { max-height: 180px; overflow: auto; }
+      #destList button, #crumbs button { background: none; border: 0; color: inherit; cursor: pointer; font: inherit; padding: 3px 4px; text-align: left; }
+      #destList button { width: 100%; }
+      #destList button:hover, #crumbs button:hover { text-decoration: underline; }
+      #crumbs button:last-child { font-weight: 600; }
+      .row { display: flex; gap: 4px; margin-top: 4px; }
+      .row input { flex: 1; min-width: 0; }
+      .muted { opacity: 0.7; }
+      #go, #cancel { font: inherit; margin-top: 8px; padding: 8px; width: 100%; }
+      progress { width: 100%; }
+      #status { overflow-wrap: anywhere; }
+      details { margin-top: 6px; overflow-wrap: anywhere; }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <fieldset>
+        <legend data-i18n="source"></legend>
+        <button type="button" id="useSelection" data-i18n="useSelection"></button>
+        <label><span data-i18n="orPasteLink"></span> <input type="url" id="sourceLink" placeholder="https://drive.google.com/…" /></label>
+        <ul id="sources"><li class="muted" data-i18n="nothingSelected"></li></ul>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="destination"></legend>
+        <nav id="crumbs" data-i18n-aria-label="destNavLabel"></nav>
+        <ul id="destList"></ul>
+        <label><span data-i18n="orPasteFolderLink"></span> <input type="url" id="destLink" placeholder="https://drive.google.com/drive/folders/…" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="name"></legend>
+        <label><span data-i18n="copyName"></span> <input type="text" id="name" required disabled /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="permissions"></legend>
+        <label><input type="radio" name="perms" value="inherit" checked /> <span data-i18n="permsInherit"></span></label>
+        <label><input type="radio" name="perms" value="keep" /> <span data-i18n="permsKeep"></span></label>
+        <label><input type="radio" name="perms" value="new" /> <span data-i18n="permsNew"></span></label>
+        <div id="newPerms" hidden>
+          <div id="permRows"></div>
+          <button type="button" id="addPerm" data-i18n="addPerson"></button>
+          <label><input type="checkbox" id="notify" /> <span data-i18n="notify"></span></label>
+        </div>
+      </fieldset>
+
+      <label><input type="checkbox" id="resume" /> <span data-i18n="resume"></span></label>
+      <button id="go" disabled data-i18n="clone"></button>
+      <button type="button" id="cancel" hidden data-i18n="cancel"></button>
+    </form>
+
+    <progress id="progress" hidden></progress>
+    <p id="status" role="status" aria-live="polite"></p>
+    <div id="report"></div>
+
+    <template id="permRow">
+      <div class="row">
+        <input type="email" data-i18n-placeholder="emailPlaceholder" data-i18n-aria-label="email" />
+        <select data-i18n-aria-label="role">
+          <option value="reader" data-i18n="roleReader"></option>
+          <option value="commenter" data-i18n="roleCommenter"></option>
+          <option value="writer" data-i18n="roleWriter"></option>
+        </select>
+        <button type="button" data-i18n-aria-label="remove">✕</button>
+      </div>
+    </template>
+
+    <script type="module" src="sidepanel.js"></script>
+  </body>
+</html>
