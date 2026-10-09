@@ -17,7 +17,7 @@ Al instalar o usar Clonar en Drive (la extensión de Chrome o el complemento de 
 
 # Terms of service — Clone in Drive
 
-_Last updated: October 9, 2026_ · [Home](index.md#clone-in-drive)
+_Last updated: October 9, 2026_ · [Home](en.md)
 
 By installing or using Clone in Drive (the Chrome extension or the Google Workspace add-on) you agree to these terms.
 

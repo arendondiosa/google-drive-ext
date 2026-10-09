@@ -9,7 +9,7 @@ Textos listos para pegar en los formularios de Google. Las justificaciones van e
 | Página principal | `https://rendon.co/google-drive-ext/` |
 | Política de privacidad | `https://rendon.co/google-drive-ext/privacy.html` |
 | Términos del servicio | `https://rendon.co/google-drive-ext/terms.html` |
-| Ayuda / soporte | `https://rendon.co/google-drive-ext/guia.html` (español) · `https://rendon.co/google-drive-ext/guide.html` (inglés) |
+| Ayuda / soporte | `https://rendon.co/google-drive-ext/` (español) · `https://rendon.co/google-drive-ext/en/` (inglés) |
 | Dominio autorizado | `rendon.co` |
 
 ## 1. Verificación OAuth (Google Auth Platform)

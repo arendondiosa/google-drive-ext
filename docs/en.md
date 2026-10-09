@@ -1,8 +1,27 @@
-# User guide
+---
+permalink: /en/
+---
 
-[Home](index.md#clone-in-drive) · [Español](guia.md)
+# Clone in Drive
 
-Clone in Drive comes as a Chrome extension and as a Google Workspace add-on. The options are the same in both; what changes is where they appear and how progress is shown.
+[Español](index.md)
+
+Clone Google Drive files and whole folders, choosing where the copy goes, its name and its permissions. This page explains how to use it.
+
+- **Entire folders** with all their subfolders, including those others shared with you.
+- **Destination of your choice**: My Drive, any subfolder or a shared drive.
+- **Permissions of your choice**: inherit from the destination, keep the original ones or set new ones.
+- **Visible progress**, with the option to cancel and to resume an incomplete copy.
+
+## Two ways to use it
+
+The options are the same in both; what changes is where they appear and how progress is shown.
+
+| | Chrome extension | Google Workspace add-on |
+|---|---|---|
+| Where it works | Desktop Chrome | Any browser, in the Drive side panel |
+| Large copies | No time limit, live progress | Keep going on their own in the background |
+| Install | [Download the latest version](https://github.com/arendondiosa/google-drive-ext/releases/latest) | Coming soon to Google Workspace Marketplace |
 
 ## Opening it
 
@@ -72,6 +91,12 @@ No. The current contents of each file are copied.
 **What if the original folder changes while it is being copied?**
 Some file may be left uncopied. When it finishes, clone again with *Resume* to complete it.
 
+## Why it asks for Google Drive access
+
+Cloning a folder requires reading all of its contents, creating the copies in the destination and, if you ask for it, reading and repeating its permissions. That is the only use made of the access: there are no servers of our own, your files are not downloaded and no data is shared. Details are in the [privacy policy](privacy.md#privacy-policy--clone-in-drive).
+
 ## Help
 
 [Report a problem](https://github.com/arendondiosa/google-drive-ext/issues) · arendondiosa@gmail.com
+
+[Privacy policy](privacy.md#privacy-policy--clone-in-drive) · [Terms of service](terms.md#terms-of-service--clone-in-drive) · [For developers](dev.md)

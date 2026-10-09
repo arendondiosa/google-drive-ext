@@ -1,6 +1,6 @@
 # Política de privacidad — Clonar en Drive
 
-_Última actualización: 9 de octubre de 2026_ · [English version below](#privacy-policy--clone-in-drive)
+_Última actualización: 9 de octubre de 2026_ · [Inicio](index.md) · [English version below](#privacy-policy--clone-in-drive)
 
 **Clonar en Drive** existe en dos formas: una extensión de Chrome y un complemento de Google Workspace para Drive. Las dos acceden a tu Google Drive únicamente para ejecutar las copias que tú solicitas.
 
@@ -36,7 +36,7 @@ arendondiosa@gmail.com
 
 # Privacy policy — Clone in Drive
 
-_Last updated: October 9, 2026_
+_Last updated: October 9, 2026_ · [Home](en.md)
 
 **Clone in Drive** comes in two forms: a Chrome extension and a Google Workspace add-on for Drive. Both access your Google Drive only to perform the copies you request.
 
