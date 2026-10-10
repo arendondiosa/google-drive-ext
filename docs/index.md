@@ -9,6 +9,16 @@ Clona archivos y carpetas completas de Google Drive, eligiendo dónde va la copi
 - **Permisos a elección**: heredar los del destino, conservar los del original o definir nuevos.
 - **Avance visible**, con opción de cancelar y de retomar una copia incompleta.
 
+## Tu propia copia de las carpetas compartidas
+
+Drive no tiene «hacer una copia» para carpetas, y lo que te comparten depende de que su dueño lo siga compartiendo. Clonar en Drive crea en tu unidad una copia independiente de toda la carpeta, de la que tú eres propietario:
+
+- **Sigue siendo tuya** aunque te quiten el acceso o borren el original.
+- **Puedes editarla, reorganizarla y compartirla** sin tocar el original.
+- **Conserva toda la estructura** de subcarpetas, sin copiar archivo por archivo.
+
+Los archivos cuyo dueño desactivó la copia se omiten y se listan al final. Úsalo solo con contenido que tengas derecho a copiar.
+
 ## Dos formas de usarlo
 
 Las opciones son las mismas en las dos; cambia dónde aparecen y cómo se ve el avance.

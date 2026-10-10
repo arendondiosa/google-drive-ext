@@ -13,6 +13,16 @@ Clone Google Drive files and whole folders, choosing where the copy goes, its na
 - **Permissions of your choice**: inherit from the destination, keep the original ones or set new ones.
 - **Visible progress**, with the option to cancel and to resume an incomplete copy.
 
+## Your own copy of shared folders
+
+Drive has no "make a copy" for folders, and what is shared with you lasts only as long as its owner keeps sharing it. Clone in Drive creates an independent copy of the whole folder in your own Drive, owned by you:
+
+- **It stays yours** even if your access is removed or the original is deleted.
+- **You can edit, reorganize and share it** without touching the original.
+- **It keeps the entire structure** of subfolders, with no copying file by file.
+
+Files whose owner disabled copying are skipped and listed at the end. Use it only with content you have the right to copy.
+
 ## Two ways to use it
 
 The options are the same in both; what changes is where they appear and how progress is shown.

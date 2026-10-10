@@ -1,6 +1,6 @@
 {
   "extName": { "message": "Clonar en Drive" },
-  "extDescription": { "message": "Clona archivos o carpetas de Google Drive eligiendo destino, nombre y permisos." },
+  "extDescription": { "message": "Clona archivos y carpetas de Drive, incluso las compartidas contigo, eligiendo destino, nombre y permisos." },
 
   "source": { "message": "Origen" },
   "useSelection": { "message": "Usar selección de Drive" },

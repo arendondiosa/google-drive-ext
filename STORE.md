@@ -6,10 +6,10 @@ Textos listos para pegar en los formularios de Google. Las justificaciones van e
 
 | Campo | URL |
 |---|---|
-| Página principal | `https://rendon.co/google-drive-ext/` |
-| Política de privacidad | `https://rendon.co/google-drive-ext/privacy.html` |
-| Términos del servicio | `https://rendon.co/google-drive-ext/terms.html` |
-| Ayuda / soporte | `https://rendon.co/google-drive-ext/` (español) · `https://rendon.co/google-drive-ext/en/` (inglés) |
+| Página principal | `https://google-drive-ext.rendon.co/` |
+| Política de privacidad | `https://google-drive-ext.rendon.co/privacy.html` |
+| Términos del servicio | `https://google-drive-ext.rendon.co/terms.html` |
+| Ayuda / soporte | `https://google-drive-ext.rendon.co/` (español) · `https://google-drive-ext.rendon.co/en/` (inglés) |
 | Dominio autorizado | `rendon.co` |
 
 ## 1. Verificación OAuth (Google Auth Platform)
@@ -67,53 +67,100 @@ Textos listos para pegar en los formularios de Google. Las justificaciones van e
 - Marcar **Personally identifiable information**: los correos que el usuario escribe para compartir la copia, que se envían solo a Google Drive.
 - Certificar las tres declaraciones (no se venden datos, no se usan para fines ajenos al propósito único, no se usan para solvencia ni préstamos).
 
+### Descripción corta (viene del manifest, máx. 132 caracteres)
+
+- **es**: Clona archivos y carpetas de Drive, incluso las compartidas contigo, eligiendo destino, nombre y permisos.
+- **en**: Clone Drive files and folders, including ones shared with you, choosing destination, name and permissions.
+
 ### Descripción — español
 
-> Clona archivos y carpetas completas de Google Drive, eligiendo dónde va la copia, con qué nombre y con qué permisos.
+> Clona archivos y carpetas completas de Google Drive, incluidas las que otros compartieron contigo, eligiendo dónde va la copia, con qué nombre y con qué permisos.
 >
-> • Carpetas enteras, con todas sus subcarpetas, incluidas las que otros compartieron contigo.
-> • Destino a elección: Mi unidad, cualquier subcarpeta o una unidad compartida.
-> • Permisos a elección: heredar los del destino, conservar los del original o definir nuevos.
-> • Avance en vivo, con opción de cancelar y de retomar una copia incompleta.
+> TU PROPIA COPIA DE LAS CARPETAS COMPARTIDAS
+> Drive no tiene «hacer una copia» para carpetas, y lo que te comparten depende de que su dueño lo siga compartiendo. Clonar en Drive crea en tu unidad una copia independiente de toda la carpeta, de la que tú eres propietario:
+> • Sigue siendo tuya aunque te quiten el acceso o borren el original.
+> • Puedes editarla, reorganizarla y compartirla sin tocar el original.
+> • Conserva toda la estructura de subcarpetas, sin copiar archivo por archivo.
 >
-> Funciona desde un panel junto a Drive: selecciona los archivos, elige destino y pulsa Clonar. No tiene servidores propios: tu navegador habla directamente con Google Drive.
+> TÚ ELIGES
+> • Destino: Mi unidad, cualquier subcarpeta o una unidad compartida.
+> • Nombre de la copia.
+> • Permisos: privada, con las mismas personas que el original, o con quien tú indiques.
+>
+> CÓMO FUNCIONA
+> Selecciona los archivos en Drive, abre el panel, elige destino y pulsa Clonar. Verás el avance en vivo, con opción de cancelar y de retomar una copia incompleta.
+>
+> PRIVACIDAD
+> No tiene servidores propios: tu navegador habla directamente con Google Drive y tus archivos no se descargan.
+>
+> Los archivos cuyo dueño desactivó la copia se omiten y se listan al final. Úsalo solo con contenido que tengas derecho a copiar.
 
 ### Descripción — inglés
 
-> Clone Google Drive files and whole folders, choosing where the copy goes, its name and its permissions.
+> Clone Google Drive files and whole folders, including the ones others shared with you, choosing where the copy goes, its name and its permissions.
 >
-> • Entire folders with all their subfolders, including those others shared with you.
-> • Destination of your choice: My Drive, any subfolder or a shared drive.
-> • Permissions of your choice: inherit from the destination, keep the original ones or set new ones.
-> • Live progress, with the option to cancel and to resume an incomplete copy.
+> YOUR OWN COPY OF SHARED FOLDERS
+> Drive has no "make a copy" for folders, and what is shared with you lasts only as long as its owner keeps sharing it. Clone in Drive creates an independent copy of the whole folder in your own Drive, owned by you:
+> • It stays yours even if your access is removed or the original is deleted.
+> • You can edit, reorganize and share it without touching the original.
+> • It keeps the entire subfolder structure, with no copying file by file.
 >
-> It works from a panel next to Drive: select the files, pick a destination and press Clone. There are no servers of our own: your browser talks directly to Google Drive.
+> YOU CHOOSE
+> • Destination: My Drive, any subfolder or a shared drive.
+> • The name of the copy.
+> • Permissions: private, the same people as the original, or whoever you specify.
+>
+> HOW IT WORKS
+> Select the files in Drive, open the panel, pick a destination and press Clone. You get live progress, with the option to cancel and to resume an incomplete copy.
+>
+> PRIVACY
+> There are no servers of our own: your browser talks directly to Google Drive and your files are not downloaded.
+>
+> Files whose owner disabled copying are skipped and listed at the end. Use it only with content you have the right to copy.
 
 ## 3. Google Workspace Marketplace
 
 ### Descripción corta (máx. 200 caracteres)
 
-- **es**: Clona archivos y carpetas completas de Drive eligiendo destino, nombre y permisos. Funciona en la barra lateral de Drive, en cualquier navegador.
-- **en**: Clone Drive files and whole folders choosing destination, name and permissions. Works in the Drive side panel, in any browser.
+- **es**: Clona archivos y carpetas completas de Drive, incluso las compartidas contigo, eligiendo destino, nombre y permisos. En la barra lateral de Drive, desde cualquier navegador.
+- **en**: Clone Drive files and whole folders, including ones shared with you, choosing destination, name and permissions. In the Drive side panel, from any browser.
 
 ### Descripción detallada — español
 
-> Clona archivos y carpetas completas de Google Drive desde la barra lateral, sin instalar nada en el navegador.
+> Clona archivos y carpetas completas de Google Drive, incluidas las que otros compartieron contigo, eligiendo dónde va la copia, con qué nombre y con qué permisos.
 >
-> • Carpetas enteras, con todas sus subcarpetas, incluidas las que otros compartieron contigo.
-> • Destino a elección: Mi unidad, cualquier subcarpeta o una unidad compartida.
-> • Permisos a elección: heredar los del destino, conservar los del original o definir nuevos.
-> • Las copias grandes continúan solas en segundo plano, con avance y opción de cancelar.
+> TU PROPIA COPIA DE LAS CARPETAS COMPARTIDAS
+> Drive no tiene «hacer una copia» para carpetas, y lo que te comparten depende de que su dueño lo siga compartiendo. Clonar en Drive crea en tu unidad una copia independiente de toda la carpeta, de la que tú eres propietario:
+> • Sigue siendo tuya aunque te quiten el acceso o borren el original.
+> • Puedes editarla, reorganizarla y compartirla sin tocar el original.
+> • Conserva toda la estructura de subcarpetas, sin copiar archivo por archivo.
 >
-> Selecciona los archivos en Drive, abre el complemento, elige destino y pulsa Clonar.
+> TÚ ELIGES
+> • Destino: Mi unidad, cualquier subcarpeta o una unidad compartida.
+> • Nombre de la copia.
+> • Permisos: privada, con las mismas personas que el original, o con quien tú indiques.
+>
+> CÓMO FUNCIONA
+> Selecciona los archivos en Drive, abre el complemento en la barra lateral, elige destino y pulsa Clonar. Las copias grandes continúan solas en segundo plano, con avance y opción de cancelar. No hay nada que instalar en el navegador.
+>
+> Los archivos cuyo dueño desactivó la copia se omiten y se listan al final. Úsalo solo con contenido que tengas derecho a copiar.
 
 ### Descripción detallada — inglés
 
-> Clone Google Drive files and whole folders from the side panel, with nothing to install in the browser.
+> Clone Google Drive files and whole folders, including the ones others shared with you, choosing where the copy goes, its name and its permissions.
 >
-> • Entire folders with all their subfolders, including those others shared with you.
-> • Destination of your choice: My Drive, any subfolder or a shared drive.
-> • Permissions of your choice: inherit from the destination, keep the original ones or set new ones.
-> • Large copies keep going on their own in the background, with progress and the option to cancel.
+> YOUR OWN COPY OF SHARED FOLDERS
+> Drive has no "make a copy" for folders, and what is shared with you lasts only as long as its owner keeps sharing it. Clone in Drive creates an independent copy of the whole folder in your own Drive, owned by you:
+> • It stays yours even if your access is removed or the original is deleted.
+> • You can edit, reorganize and share it without touching the original.
+> • It keeps the entire subfolder structure, with no copying file by file.
 >
-> Select the files in Drive, open the add-on, pick a destination and press Clone.
+> YOU CHOOSE
+> • Destination: My Drive, any subfolder or a shared drive.
+> • The name of the copy.
+> • Permissions: private, the same people as the original, or whoever you specify.
+>
+> HOW IT WORKS
+> Select the files in Drive, open the add-on in the side panel, pick a destination and press Clone. Large copies keep going on their own in the background, with progress and the option to cancel. There is nothing to install in the browser.
+>
+> Files whose owner disabled copying are skipped and listed at the end. Use it only with content you have the right to copy.

@@ -2,8 +2,8 @@
 
 Clona archivos o carpetas de Google Drive eligiendo destino, nombre y permisos. Existe como extensión de Chrome (raíz del repo) y como complemento de Google Workspace (`addon/`).
 
-- **Guía de uso**: <https://rendon.co/google-drive-ext/> ([English](https://rendon.co/google-drive-ext/en/))
-- **Documentación para desarrolladores** (instalar desde el código, tests, publicar): <https://rendon.co/google-drive-ext/dev/> · fuente en [`docs/dev.md`](docs/dev.md)
+- **Guía de uso**: <https://google-drive-ext.rendon.co/> ([English](https://google-drive-ext.rendon.co/en/))
+- **Documentación para desarrolladores** (instalar desde el código, tests, publicar): <https://google-drive-ext.rendon.co/dev/> · fuente en [`docs/dev.md`](docs/dev.md)
 - **Textos para las tiendas y la verificación de Google**: [`STORE.md`](STORE.md)
 
 ```sh
