@@ -11,4 +11,4 @@ npm test      # lógica de las dos versiones contra un Drive simulado
 npm run zip   # dist/extension.zip, el paquete de la extensión
 ```
 
-El sitio es la carpeta `docs/`, publicada con GitHub Pages (Settings → Pages → rama `main`, carpeta `/docs`).
+El sitio es la carpeta `docs/`, publicada con GitHub Pages por el workflow `.github/workflows/pages.yml` (Settings → Pages → Source: **GitHub Actions**). Google Analytics se activa definiendo la variable del repositorio `GOOGLE_TAG_ID` con el ID de medición `G-XXXXXXXXXX` (Settings → Secrets and variables → Actions → Variables); sin ella el sitio se publica sin analíticas.

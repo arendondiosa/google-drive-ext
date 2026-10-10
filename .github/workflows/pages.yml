@@ -1,0 +1,50 @@
+# Construye y publica el sitio (carpeta docs/) en GitHub Pages. Se usa un workflow, y no la publicación directa
+# desde la rama, para poder pasar al sitio el ID de la etiqueta de Google (Google Analytics, G-XXXXXXXXXX)
+# desde la variable GOOGLE_TAG_ID del repositorio.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**', '.github/workflows/pages.yml']
+  workflow_dispatch: # para republicar a mano tras cambiar GOOGLE_TAG_ID
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pasar el ID de la etiqueta de Google al sitio
+        env:
+          # Settings → Secrets and variables → Actions → Variables. Sin ella, el sitio se publica sin analíticas.
+          GOOGLE_TAG_ID: ${{ vars.GOOGLE_TAG_ID }}
+        run: |
+          if [ -n "$GOOGLE_TAG_ID" ]; then
+            case "$GOOGLE_TAG_ID" in G-*) ;; *) echo "GOOGLE_TAG_ID debe tener la forma G-XXXXXXXXXX" >&2; exit 1 ;; esac
+            printf '\ngoogle_tag_id: "%s"\n' "$GOOGLE_TAG_ID" >> docs/_config.yml
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

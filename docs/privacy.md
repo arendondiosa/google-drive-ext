@@ -20,9 +20,13 @@ _Última actualización: 9 de octubre de 2026_ · [Inicio](index.md) · [English
 
 - No hay servidores propios ni de terceros: los datos solo viajan entre tu navegador y Google, o dentro de Google.
 - No se venden, comparten ni transfieren tus datos, ni se usan para publicidad o para entrenar modelos.
-- No se recopilan analíticas ni telemetría, y ninguna persona accede a tus datos.
+- Ni la extensión ni el complemento recopilan analíticas o telemetría, y ninguna persona accede a tus datos.
 
 El uso de la información recibida de las API de Google cumple la [Política de datos de usuario de los servicios de API de Google](https://developers.google.com/terms/api-services-user-data-policy), incluidos los requisitos de Uso Limitado.
+
+## Este sitio web
+
+Este sitio web (no la extensión ni el complemento) usa Google Analytics para medir las visitas, lo que puede implicar cookies y el envío a Google de datos de navegación como la página visitada, el navegador y la dirección IP. Esos datos no se relacionan con tu Google Drive ni con el uso de la extensión o el complemento.
 
 ## Revocar el acceso
 
@@ -56,9 +60,13 @@ _Last updated: October 9, 2026_ · [Home](en.md)
 
 - There are no servers of our own or of third parties: data only travels between your browser and Google, or within Google.
 - Your data is not sold, shared or transferred, and is not used for advertising or to train models.
-- No analytics or telemetry are collected, and no human accesses your data.
+- Neither the extension nor the add-on collects analytics or telemetry, and no human accesses your data.
 
 The use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
+
+## This website
+
+This website (not the extension or the add-on) uses Google Analytics to measure visits, which may involve cookies and sending Google browsing data such as the page visited, the browser and the IP address. That data is not linked to your Google Drive or to your use of the extension or the add-on.
 
 ## Revoking access
 
