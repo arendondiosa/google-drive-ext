@@ -9,6 +9,7 @@
     "https://www.googleapis.com/auth/script.locale",
     "https://www.googleapis.com/auth/script.scriptapp"
   ],
+  "urlFetchWhitelist": ["https://www.googleapis.com/drive/v3/"],
   "addOns": {
     "common": {
       "name": "Clonar en Drive",
